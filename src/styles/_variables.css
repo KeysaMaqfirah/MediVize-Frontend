@@ -1,0 +1,19 @@
+:root {
+    --primary-color: #8B9DC3; 
+    --secondary-color: #DFE2EB; 
+    --accent-color: #FFC0CB; 
+    --text-color: #333;
+    --light-text-color: #666;
+    --background-light: #F4F7FC; 
+    --background-dark: #E0E7EE; 
+    --border-color: #C0CCDA;
+
+    --font-family-primary: 'Poppins', sans-serif;
+
+    --box-shadow-soft: 0 4px 12px rgb(80, 145, 189);
+    --box-shadow-hover: 0 8px 20px rgba(47, 133, 209, 0.858);
+
+    --transition-speed-fast: 0.2s;
+    --transition-speed-normal: 0.3s;
+    --transition-speed-slow: 0.5s;
+}

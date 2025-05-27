@@ -1,0 +1,99 @@
+======================================
+📁 Struktur Proyek: MediVize/
+======================================
+
+medivize/
+├── index.js                 ← Entry point utama (bukan di dalam /src)
+├── package.json            ← Metadata dan daftar dependensi proyek
+├── package-lock.json       ← Mengunci versi dependensi
+├── webpack.config.js       ← Konfigurasi Webpack
+├── medivize.zip            ← Arsip proyek (untuk submission/back-up)
+├── public/
+│   ├── index.html          ← HTML utama
+│   └── assets/             ← Berisi gambar/font/media statis
+├── src/
+│   ├── components/         ← Komponen UI yang dapat digunakan ulang
+│   │   ├── Button.js
+│   │   ├── Header.js
+│   │   ├── Modal.js
+│   │   └── Notification.js
+│   ├── pages/              ← File JavaScript untuk setiap halaman
+│   │   ├── AboutAndFAQ.js
+│   │   ├── ClassificationResult.js
+│   │   ├── DrugInfo.js
+│   │   ├── Footer.js
+│   │   ├── Home.js
+│   │   ├── NotFound.js
+│   │   ├── SearchHistory.js
+│   │   ├── SearchPage.js
+│   │   └── UsageGuide.js
+│   ├── styles/             ← File CSS terorganisir
+│   │   ├── main.css
+│   │   ├── _variables.css
+│   │   ├── components/
+│   │   │   ├── button.css
+│   │   │   ├── header.css
+│   │   │   ├── modal.css
+│   │   │   └── notification.css
+│   │   └── pages/
+│   │       ├── about.css
+│   │       ├── classification.css
+│   │       ├── drug-info.css
+│   │       ├── footer.css
+│   │       ├── guide.css
+│   │       ├── history.css
+│   │       ├── home.css
+│   │       ├── not-found.css
+│   │       └── search.css
+│   └── utils/              ← Fungsi bantu dan logika umum
+│       ├── api.js
+│       ├── helpers.js
+│       └── router.js
+
+
+======================================
+🚀 Cara Menjalankan Proyek
+======================================
+
+1. ✅ Pastikan Node.js dan npm sudah terpasang:
+   Cek dengan:
+   > node -v
+   > npm -v
+
+2. ✅ Masuk ke direktori proyek:
+   > cd path/ke/folder/medivize
+
+3. ✅ Install semua dependensi:
+   > npm install
+
+4. ✅ Jalankan proyek dalam mode pengembangan:
+   Jika di package.json terdapat script:
+   "start": "webpack serve --open"
+   
+   Maka jalankan:
+   > npm run start
+
+   Ini akan membuka aplikasi di:
+   > http://localhost:8080/
+
+5. ✅ Build untuk produksi:
+   > npm run build
+
+   Hasil build akan muncul di folder `dist/` (atau sesuai konfigurasi di `webpack.config.js`)
+
+6. ❗ Jika `npm run start` tidak tersedia:
+   Jalankan manual:
+   > npx webpack serve --open
+
+   Jika belum punya Webpack, install:
+   > npm install --save-dev webpack webpack-cli webpack-dev-server
+
+
+======================================
+📌 Catatan Tambahan
+======================================
+
+- Entry point aplikasi adalah `index.js` yang berada di root, bukan di dalam `/src`.
+- Struktur ini mendukung pemisahan file berdasarkan fungsi (komponen, halaman, style, dan utilitas).
+- Aplikasi dibangun menggunakan Webpack untuk SPA (Single Page Application).
+- File `router.js` kemungkinan mengatur navigasi halaman SPA.

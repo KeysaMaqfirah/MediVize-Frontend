@@ -1,0 +1,65 @@
+
+.drug-info-page {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 100px); 
+    background-color: var(--background-light);
+}
+
+.drug-info-page .card {
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    box-shadow: var(--box-shadow-soft);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.drug-info-page h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.drug-info-page p {
+    color: var(--light-text-color);
+    margin-bottom: 10px;
+}
+
+.drug-info-page p strong {
+    color: var(--text-color);
+}
+
+.info-section {
+    background-color: var(--background-dark);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color var(--transition-speed-normal) ease;
+}
+
+.info-section:hover {
+    background-color: var(--secondary-color);
+}
+
+.info-section h3 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .drug-info-page {
+        padding: 20px 10px;
+    }
+    .drug-info-page h2 {
+        font-size: 2em;
+    }
+    .info-section h3 {
+        font-size: 1.4em;
+    }
+}

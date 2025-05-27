@@ -1,0 +1,42 @@
+
+
+/**
+ * @param {string} string 
+ * @returns {string} 
+ */
+export const capitalizeFirstLetter = (string) => {
+    if (!string) return '';
+    return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
+/**
+ * @param {Date} date 
+ * @returns {string} 
+ */
+export const formatDate = (date) => {
+    const d = new Date(date);
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0'); 
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
+};
+
+/**
+ * @param {Date} date 
+ * @returns {string} 
+ */
+export const formatTime = (date) => {
+    const d = new Date(date);
+    const hours = String(d.getHours()).padStart(2, '0');
+    const minutes = String(d.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+};
+
+/**
+ * @param {string} value 
+ * @returns {boolean} 
+ */
+export const isNotEmpty = (value) => {
+    return value && value.trim() !== '';
+};
+
